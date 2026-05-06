@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kannicash — Gestión de Préstamos Simple y Profesional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="navbar">
+        <a href="#" class="nav-logo">
+            <div class="nav-logo-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                </svg>
+            </div>
+            Kannicash
+        </a>
+
+        <div class="nav-toggle" id="nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#problema">Soluciones</a></li>
+            <li><a href="#como-funciona">Cómo funciona</a></li>
+            <li><a href="#alcance">Alcance</a></li>
+            <li><a href="#precios">Precios</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+
+        <div class="nav-right">
+            <a href="#" class="btn-login">Iniciar sesión</a>
+            <a href="#precios" class="nav-cta">Empieza gratis</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-blobs">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge reveal">
+                <span></span>
+                Diseñado para RD 🇩🇴
+            </div>
+            <h1 class="hero-title reveal">
+                Gestiona tus préstamos de forma <em>simple y sin errores</em>
+            </h1>
+            <p class="hero-sub reveal">
+                La app diseñada para prestamistas informales en República Dominicana. Control total de clientes, cuotas
+                e intereses — todo en tu celular.
+            </p>
+            <div class="hero-actions reveal">
+                <a href="#precios" class="btn-primary">
+                    Empieza gratis
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                <a href="#como-funciona" class="btn-ghost">
+                    Ver cómo funciona
+                </a>
+            </div>
+            <div class="hero-trust reveal">
+                <div class="trust-avatars">
+                    <span style="background:#e0f2fe;color:#0369a1;font-size:12px;font-weight:700">JM</span>
+                    <span style="background:#dcfce7;color:#15803d;font-size:12px;font-weight:700">MR</span>
+                    <span style="background:#fef9c3;color:#a16207;font-size:12px;font-weight:700">PG</span>
+                    <span style="background:#ede9fe;color:#6d28d9;font-size:12px;font-weight:700">CL</span>
+                </div>
+                <span>+500 prestamistas ya confían en nosotros</span>
+            </div>
+        </div>
+
+        <div class="hero-visual reveal">
+            <!-- Elementos flotantes premium -->
+            <div class="floating-ui f-pill-1">
+                <div class="f-icon">✓</div>
+                Ingreso recibido
+            </div>
+            <div class="floating-ui f-pill-2">
+                <div class="f-icon">$</div>
+                +RD$ 4,500
+            </div>
+            <div class="floating-ui f-pill-3">
+                <div class="f-icon">👤</div>
+                Cliente nuevo
+            </div>
+            <div class="floating-ui f-pill-4">
+                <div class="f-icon" style="background:#25d366">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.215 3.076.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.938 3.659 1.435 5.634 1.436h.005c6.558 0 11.894-5.335 11.897-11.893 0-3.18-1.238-6.17-3.486-8.418z" />
+                    </svg>
+                </div>
+                WhatsApp enviado
+            </div>
+            <div class="floating-ui f-card">
+                <div class="f-label">Recaudación</div>
+                <div class="f-bar"></div>
+            </div>
+
+            <!-- Partículas decorativas -->
+            <div class="particle p-1"></div>
+            <div class="particle p-2"></div>
+            <div class="particle p-3"></div>
+
+            <div class="phone-mockup" id="hero-video-container">
+                <div class="phone-frame">
+                    <div class="phone-island"></div>
+                    <video autoplay muted loop playsinline poster="preview.jpeg" class="hero-video">
+                        <source src="video_header.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGOS BAND -->
+    <div class="logos-band">
+        <div class="logos-label">Confiado por financieras independientes en todo RD</div>
+        <div style="overflow:hidden">
+            <div class="logos-track">
+                <span>SANTO DOMINGO</span><span>•</span>
+                <span>SANTIAGO</span><span>•</span>
+                <span>LA VEGA</span><span>•</span>
+                <span>SAN CRISTÓBAL</span><span>•</span>
+                <span>LA ROMANA</span><span>•</span>
+                <span>PUERTO PLATA</span><span>•</span>
+                <span>BARAHONA</span><span>•</span>
+                <span>MOCA</span><span>•</span>
+                <!-- duplicate for seamless loop -->
+                <span>SANTO DOMINGO</span><span>•</span>
+                <span>SANTIAGO</span><span>•</span>
+                <span>LA VEGA</span><span>•</span>
+                <span>SAN CRISTÓBAL</span><span>•</span>
+                <span>LA ROMANA</span><span>•</span>
+                <span>PUERTO PLATA</span><span>•</span>
+                <span>BARAHONA</span><span>•</span>
+                <span>MOCA</span><span>•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROBLEMA / SOLUCIÓN -->
+    <section class="ps-section" id="problema" style="background:#fcfdfe">
+        <div class="reveal" style="text-align:center">
+            <div class="section-label">Soluciones</div>
+            <h2 class="section-title">De la libreta a la <em>automatización</em></h2>
+            <p class="section-sub" style="margin: 0 auto 60px;">Kannicash elimina el desorden y profesionaliza la
+                gestión de tu cartera de préstamos.</p>
+        </div>
+        <div class="ps-grid">
+            <div class="ps-card problem reveal">
+                <div class="ps-card-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z">
+                        </path>
+                        <line x1="12" y1="9" x2="12" y2="13"></line>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                    El Caos Actual
+                </div>
+                <div class="ps-item">
+                    <div class="ps-item-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="ps-item-text">Libretas de papel y hojas de cálculo difíciles de mantener y fáciles de
+                        perder.</div>
+                </div>
+                <div class="ps-item">
+                    <div class="ps-item-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="ps-item-text">Cálculos manuales de intereses y mora que generan desconfianza en el
+                        cliente.</div>
+                </div>
+                <div class="ps-item">
+                    <div class="ps-item-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </div>
+                    <div class="ps-item-text">Falta de respaldo seguro. Si pierdes el celular o la libreta, pierdes tu
+                        negocio.</div>
+                </div>
+            </div>
+
+            <div class="ps-card solution reveal">
+                <div class="ps-card-title">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                    Solución Digital
+                </div>
+                <div class="ps-item">
+                    <div class="ps-item-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="ps-item-text">Automatización total: Sistemas Francés y Cuota Fija calculados al
+                        instante.</div>
+                </div>
+                <div class="ps-item">
+                    <div class="ps-item-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="ps-item-text">Respaldo automático en la nube. Tu información siempre segura y accesible.
+                    </div>
+                </div>
+                <div class="ps-item">
+                    <div class="ps-item-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                    </div>
+                    <div class="ps-item-text">Profesionalismo absoluto: Envía recibos digitales con tu logo vía
+                        WhatsApp.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como-funciona">
+        <div class="pc-container reveal">
+            <div class="pc-intro">
+                <div class="section-label">Paso a paso</div>
+                <h2 class="section-title">El mejor proceso para <em>tu éxito</em></h2>
+                <p class="section-sub" style="margin-bottom: 16px;">
+                    Hemos diseñado un flujo intuitivo que te permite pasar de la libreta a la gestión digital en minutos. Simple, rápido y profesional.
+                </p>
+                <a href="#registro" class="btn-primary">Empezar Gratis</a>
+            </div>
+
+            <div class="pc-visual">
+                <!-- Smooth ascending curve -->
+                <svg class="pc-path-svg" viewBox="0 0 1000 500" preserveAspectRatio="none">
+                    <path d="M 0,300 C 150,400 300,400 500,250 C 700,100 850,50 1000,100" fill="none" stroke="var(--primary)" stroke-width="4" stroke-linecap="round"/>
+                </svg>
+
+                <div class="pc-node pc-node-1">
+                    <div class="pc-bg-num">1</div>
+                    <div class="pc-dot"></div>
+                    <div class="pc-content">
+                        <h3 class="pc-title">Registra Clientes</h3>
+                        <p class="pc-desc">Añade clientes y préstamos en segundos. Define montos y tasas fácilmente.</p>
+                    </div>
+                </div>
+
+                <div class="pc-node pc-node-2">
+                    <div class="pc-bg-num">2</div>
+                    <div class="pc-dot"></div>
+                    <div class="pc-content">
+                        <h3 class="pc-title">Cobro Automático</h3>
+                        <p class="pc-desc">La app calcula cuotas y mora por ti. Registra pagos con un toque.</p>
+                    </div>
+                </div>
+
+                <div class="pc-node pc-node-3">
+                    <div class="pc-bg-num">3</div>
+                    <div class="pc-dot"></div>
+                    <div class="pc-content">
+                        <h3 class="pc-title">Envía Recibos</h3>
+                        <p class="pc-desc">Genera comprobantes en PDF y envíalos directamente por WhatsApp.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALCANCE / CASOS DE USO -->
+    <section id="alcance" style="background:var(--gray-50)">
+        <div class="hero-grid"></div>
+        <div class="reveal" style="text-align:center; position:relative; z-index:2;">
+            <div class="section-label">Alcance</div>
+            <h2 class="section-title">Versatilidad para <em>todo negocio</em></h2>
+            <p class="section-sub" style="margin:0 auto;">Kannicash se adapta a diferentes modelos de negocio financiero
+                en el mercado dominicano.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrap fi-blue">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                </div>
+                <div class="feature-title">Prestamistas Personales</div>
+                <div class="feature-desc">La solución perfecta para quienes gestionan su propio capital y buscan orden
+                    absoluto en su cartera.</div>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrap fi-cyan">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                    </svg>
+                </div>
+                <div class="feature-title">Micro-Financieras</div>
+                <div class="feature-desc">Profesionaliza tu pequeña oficina con herramientas de nivel bancario y
+                    reportes financieros detallados.</div>
+            </div>
+            <div class="feature-card reveal">
+                <div class="feature-icon-wrap fi-green">
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                        <path d="M3 6h18"></path>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </div>
+                <div class="feature-title">Ventas a Cuotas</div>
+                <div class="feature-desc">Ideal para negocios de electrodomésticos o muebles que venden a crédito y
+                    necesitan gestionar cobros.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS (REDISEÑO ELEGANTE) -->
+    <div class="stats-section">
+        <div class="stats-container reveal">
+            <div class="stat-item">
+                <div class="stat-num"><span>+</span>500</div>
+                <div class="stat-label">Prestamistas activos</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num"><span>$</span>2M+</div>
+                <div class="stat-label">En préstamos gestionados</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-num">99.9<span>%</span></div>
+                <div class="stat-label">Seguridad de datos</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRECIOS -->
+    <section style="background:var(--gray-50)" id="precios">
+        <div class="reveal" style="text-align:center">
+            <div class="section-label">Planes</div>
+            <h2 class="section-title">Elige el plan para <em>tu negocio</em></h2>
+            <p class="section-sub" style="margin:0 auto;">Escala según tus necesidades sin contratos forzosos.</p>
+        </div>
+
+        <!-- Billing Period Tabs -->
+        <div class="pricing-tabs-wrapper reveal">
+            <div class="pricing-tabs" id="pricing-tabs">
+                <div class="pricing-tab active" data-period="monthly">
+                    <span class="tab-label">Mensual</span>
+                </div>
+                <div class="pricing-tab" data-period="quarterly">
+                    <span class="tab-label">Trimestral</span>
+                    <span class="tab-discount">-10%</span>
+                </div>
+                <div class="pricing-tab" data-period="annual">
+                    <span class="tab-label">Anual</span>
+                    <span class="tab-discount tab-discount-best">-22%</span>
+                </div>
+                <div class="pricing-tab-indicator" id="tab-indicator"></div>
+            </div>
+        </div>
+
+        <div class="pricing-grid">
+            <!-- BASICO -->
+            <div class="pricing-card reveal" id="card-basic">
+                <div class="pricing-name">Básico</div>
+                <div class="pricing-price-wrap">
+                    <div class="pricing-price" id="price-basic">$0</div>
+                </div>
+                <div class="pricing-period" id="period-basic">Gratis para siempre</div>
+                <ul class="pricing-features">
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Hasta 20 clientes</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> 120 operaciones/mes</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> 50 comprobantes/mes</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Reportes básicos</li>
+                    <li class="pricing-feature-disabled">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg> Sin marca de agua</li>
+                    <li class="pricing-feature-disabled">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg> Multi-usuario</li>
+                </ul>
+                <a href="#" class="pricing-btn">Empezar ahora</a>
+            </div>
+
+            <!-- ESTANDAR -->
+            <div class="pricing-card featured reveal" id="card-standard">
+                <div class="pricing-badge">Más Popular</div>
+                <div class="pricing-name">Estándar</div>
+                <div class="pricing-price-wrap">
+                    <div class="pricing-price" id="price-standard">
+                        <span class="price-currency">$</span><span class="price-integer" id="price-std-int">19</span><span class="price-decimal" id="price-std-dec">.99</span>
+                    </div>
+                    <div class="pricing-price-dop" id="price-standard-dop">~RD$ 1,200 /mes</div>
+                </div>
+                <div class="pricing-period" id="period-standard">USD / mes</div>
+                <div class="pricing-total" id="total-standard">Total al mes: <strong>$19.99 USD</strong></div>
+                <div class="pricing-save-badge hidden" id="save-standard"></div>
+                <ul class="pricing-features">
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Hasta 150 clientes</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> 600 operaciones/mes</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> 200 comprobantes/mes</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Exportación Excel/PDF</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Sin marca de agua</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Multi-usuario <strong>(hasta 3)</strong></li>
+                </ul>
+                <a href="#" class="pricing-btn">Elegir Plan</a>
+            </div>
+
+            <!-- EMPRESARIAL -->
+            <div class="pricing-card reveal" id="card-enterprise">
+                <div class="pricing-badge-dev">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    En Desarrollo
+                </div>
+                <div class="pricing-name">Empresarial</div>
+                <div class="pricing-price-wrap">
+                    <div class="pricing-price" id="price-enterprise">
+                        <span class="price-currency">$</span><span class="price-integer" id="price-ent-int">39</span><span class="price-decimal" id="price-ent-dec">.99</span>
+                    </div>
+                    <div class="pricing-price-dop" id="price-enterprise-dop">~RD$ 2,400 /mes</div>
+                </div>
+                <div class="pricing-period" id="period-enterprise">USD / mes</div>
+                <div class="pricing-total" id="total-enterprise">Total al mes: <strong>$39.99 USD</strong></div>
+                <div class="pricing-save-badge hidden" id="save-enterprise"></div>
+                <ul class="pricing-features">
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Todo lo del Estándar mejorado</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Versión Web y Escritorio</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Multi-usuario <strong>(hasta 18)</strong></li>
+                    <li class="pricing-feature-highlight">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.067 2.877 1.215 3.076.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.938 3.659 1.435 5.634 1.436h.005c6.558 0 11.894-5.335 11.897-11.893 0-3.18-1.238-6.17-3.486-8.418z"/>
+                        </svg> Integración WhatsApp</li>
+                    <li class="pricing-feature-highlight">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.57-3.25 3.93A8.01 8.01 0 0 1 20 18h-2a6 6 0 0 0-12 0H4a8.01 8.01 0 0 1 7.25-7.93C9.4 9.57 8 7.95 8 6a4 4 0 0 1 4-4z"></path>
+                            <path d="M15 2.5c1.5 1 2.5 3 2.5 5"></path>
+                            <path d="M9 2.5C7.5 3.5 6.5 5.5 6.5 7.5"></path>
+                        </svg> Inteligencia Artificial</li>
+                    <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg> Soporte prioritario 24/7</li>
+                </ul>
+                <a href="#" class="pricing-btn pricing-btn-dev">Próximamente</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG BENTO SECTION -->
+    <section id="blog">
+        <div class="reveal" style="text-align:center">
+            <div class="section-label">Contenido Destacado</div>
+            <h2 class="section-title">Tu paz mental, <em>nuestra prioridad</em></h2>
+            <p class="section-sub" style="margin:0 auto;">Nos encargamos de los detalles para que avances con confianza
+                y respaldo total.</p>
+        </div>
+
+        <div class="blog-bento reveal">
+            <!-- TALL: Featured -->
+            <div class="bento-card bento-1">
+                <div
+                    style="height:100%; display:flex; flex-direction:column; justify-content:center; text-align:center;">
+                    <div class="bento-stat" style="font-size:4rem; color:var(--primary)">500+</div>
+                    <div class="bento-stat-label" style="font-size:1.1rem; color:var(--gray-900); font-weight:800">
+                        Préstamos procesados</div>
+                    <p class="bento-desc" style="margin-top:16px">Soporte técnico 24/7 y notificaciones automáticas para
+                        tu tranquilidad.</p>
+                </div>
+            </div>
+
+            <!-- SMALL 1: Stats -->
+            <div class="bento-card bento-2">
+                <div class="bento-stat">95%</div>
+                <div class="bento-stat-label">Cobros recibidos al instante, más rápido y sin fricción.</div>
+            </div>
+
+            <!-- WIDE 1: Safe and Secure -->
+            <div class="bento-card bento-3">
+                <div>
+                    <div
+                        style="background:var(--primary-soft); width:40px; height:40px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:16px; color:var(--primary)">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="bento-title">Seguro y Confiable</h3>
+                    <p class="bento-desc">Tus datos están cifrados y protegidos con los estándares más altos de la
+                        industria.</p>
+                </div>
+                <a href="#" class="bento-footer">Saber más →</a>
+            </div>
+
+            <!-- WIDE 2: Financial Health -->
+            <div class="bento-card bento-4">
+                <div>
+                    <h3 class="bento-title">Mantén tu salud financiera</h3>
+                    <p class="bento-desc">Controla tu flujo de caja y mantén un bienestar libre de preocupaciones con
+                        nuestras herramientas personalizadas.</p>
+                </div>
+                <div style="display:flex; gap:12px; margin-top:20px">
+                    <div
+                        style="background:white; padding:8px 16px; border-radius:100px; font-size:0.75rem; font-weight:700; border:1px solid var(--gray-100); display:flex; align-items:center; gap:6px">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                        </svg> Reportes
+                    </div>
+                    <div
+                        style="background:white; padding:8px 16px; border-radius:100px; font-size:0.75rem; font-weight:700; border:1px solid var(--gray-100); display:flex; align-items:center; gap:6px">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg> Gestión
+                    </div>
+                </div>
+            </div>
+
+            <!-- SMALL 2: Approval -->
+            <div class="bento-card bento-5">
+                <div class="bento-stat" style="color:#e11d48">45%</div>
+                <div class="bento-stat-label">Reducción en tiempos de aprobación y entrega de fondos.</div>
+            </div>
+        </div>
+
+        <div class="blog-actions reveal">
+            <a href="#" class="btn-explore">
+                Explorar más artículos
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+        <div class="cta-blobs">
+            <div class="cta-blob cta-blob-1"></div>
+            <div class="cta-blob cta-blob-2"></div>
+        </div>
+        <h2 class="cta-title reveal">
+            Deja atrás la libreta y<br><em>profesionaliza tu negocio</em>
+        </h2>
+        <p class="cta-sub reveal">
+            La herramienta definitiva para el prestamista moderno. Seguridad, automatización y control total.
+        </p>
+        <div class="cta-actions reveal">
+            <a href="#" class="btn-primary">Empezar ahora</a>
+            <a href="#" class="btn-ghost">Hablar por WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- BANNER PRE-FOOTER -->
+    <section class="banner-section">
+        <div class="banner-card reveal">
+            <div class="banner-content">
+                <h2 class="banner-title">¿Listo para transformar tu gestión financiera?</h2>
+                <p class="banner-sub">Experimenta el futuro de las finanzas con nuestra plataforma líder. ¡Empieza a
+                    optimizar tu operación hoy mismo!</p>
+                <a href="#precios" class="btn-white">
+                    Obtener gratis
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+            </div>
+            <div class="banner-visual">
+                <!-- Mini floating elements -->
+                <div class="floating-ui-mini fb-1">
+                    <div class="f-icon-mini">✓</div>
+                </div>
+                <div class="floating-ui-mini fb-2">
+                    <div class="f-icon-mini">$</div>
+                </div>
+
+                <!-- 3 stacked images in phone frames -->
+                <div class="b-stack">
+                    <div class="b-phone-mockup b-img-1">
+                        <div class="phone-frame">
+                            <div class="phone-island"></div>
+                            <img src="img1.jpeg" alt="Screen 1" class="b-phone-img">
+                        </div>
+                    </div>
+                    <div class="b-phone-mockup b-img-2">
+                        <div class="phone-frame">
+                            <div class="phone-island"></div>
+                            <img src="img2.jpeg" alt="Screen 2" class="b-phone-img">
+                        </div>
+                    </div>
+                    <div class="b-phone-mockup b-img-3">
+                        <div class="phone-frame">
+                            <div class="phone-island"></div>
+                            <img src="img3.jpeg" alt="Screen 3" class="b-phone-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid"></div>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="reveal">
+                    <div class="footer-brand-name">
+                        <div class="nav-logo-icon" style="width:32px;height:32px;">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                        </div>
+                        Kannicash
+                    </div>
+                    <p class="footer-brand-desc">Gestión financiera avanzada para prestamistas independientes en RD.</p>
+                    <div class="footer-social">
+                        <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg></a>
+                        <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="reveal">
+                    <div class="footer-col-title">Compañía</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Carreras</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#precios">Precios</a></li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="footer-col-title">Producto</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Facturación</a></li>
+                        <li><a href="#">Contratos</a></li>
+                        <li><a href="#">Reportes</a></li>
+                        <li><a href="#">Propuestas</a></li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="footer-col-title">Recursos</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Plantillas</a></li>
+                        <li><a href="#">Tutoriales</a></li>
+                        <li><a href="#">Guías</a></li>
+                        <li><a href="#">Documentación</a></li>
+                    </ul>
+                </div>
+                <div class="reveal">
+                    <div class="footer-col-title">Contáctanos</div>
+                    <ul class="footer-links">
+                        <li><a href="mailto:soporte@kannicash.com">soporte@kannicash.com</a></li>
+                        <li><a href="tel:+18090000000">+1 (809) 000-0000</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom reveal">
+                <p>© 2025 Kannicash. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ── Navbar Mobile Toggle ──
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ── Navbar scroll ──
+        const navbar = document.getElementById('navbar');
+        const heroGrid = document.querySelector('.hero-grid');
+        const heroBlobs = document.querySelector('.hero-blobs');
+        const heroContent = document.querySelector('.hero-content');
+        const featureGrids = document.querySelectorAll('#features .hero-grid');
+        const ctaBlobs = document.querySelectorAll('.cta-blob');
+
+        window.addEventListener('scroll', () => {
+            const scroll = window.scrollY;
+            navbar.classList.toggle('scrolled', scroll > 20);
+
+            // ── Parallax Hero ──
+            if (scroll < window.innerHeight) {
+                if (heroGrid) heroGrid.style.transform = `translateY(${scroll * 0.25}px)`;
+                if (heroBlobs) heroBlobs.style.transform = `translateY(${scroll * 0.4}px)`;
+                if (heroContent) heroContent.style.transform = `translateY(${scroll * 0.1}px)`;
+            }
+
+            // ── Parallax Features ──
+            featureGrids.forEach(fg => {
+                const rect = fg.parentElement.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const offset = (window.innerHeight - rect.top) * 0.15;
+                    fg.style.transform = `translateY(${offset}px)`;
+                }
+            });
+
+            // ── Parallax CTA Blobs ──
+            ctaBlobs.forEach((blob, idx) => {
+                const rect = blob.parentElement.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const speed = idx === 0 ? 0.2 : 0.35;
+                    const offset = (window.innerHeight - rect.top) * speed;
+                    blob.style.transform = `translate(-50%, calc(-50% + ${offset}px))`;
+                }
+            });
+        });
+
+        // ── Scroll reveal ──
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        reveals.forEach(el => observer.observe(el));
+
+        // ── Mouse tilt on phone mockup & floating elements ──
+        const dashCard = document.getElementById('hero-video-container');
+        const heroSection = document.getElementById('hero');
+        const floatingElems = document.querySelectorAll('.floating-ui');
+
+        if (dashCard) {
+            heroSection.addEventListener('mousemove', e => {
+                const rect = heroSection.getBoundingClientRect();
+                const cx = rect.left + rect.width / 2;
+                const cy = rect.top + rect.height / 2;
+                const dx = (e.clientX - cx) / 60;
+                const dy = (e.clientY - cy) / 60;
+
+                // Phone tilt
+                dashCard.style.transform = `perspective(1500px) rotateY(${dx}deg) rotateX(${-dy}deg) translateX(15%) scale(1.02)`;
+
+                // Floating elements parallax
+                floatingElems.forEach((el, idx) => {
+                    const speed = (idx + 1) * 15; // Different speeds for depth
+                    const x = (e.clientX - cx) / speed;
+                    const y = (e.clientY - cy) / speed;
+                    el.style.transform = `translate(${x}px, ${y}px)`;
+                });
+            });
+
+            heroSection.addEventListener('mouseleave', () => {
+                dashCard.style.transform = 'perspective(1500px) rotateY(0deg) rotateX(0deg) translateX(15%) scale(1)';
+                floatingElems.forEach(el => {
+                    el.style.transform = `translate(0, 0)`;
+                });
+            });
+        }
+
+        // ── Pricing Tabs Logic ──
+        const pricingData = {
+            standard: {
+                monthly:   { int: '19', dec: '.99', total: 19.99, cycles: 1,  cycleLabel: 'mes'       },
+                quarterly: { int: '17', dec: '.99', total: 17.99, cycles: 3,  cycleLabel: 'trimestre', discount: 10 },
+                annual:    { int: '15', dec: '.59', total: 15.59, cycles: 12, cycleLabel: 'año',        discount: 22 }
+            },
+            enterprise: {
+                monthly:   { int: '39', dec: '.99', total: 39.99, cycles: 1,  cycleLabel: 'mes'       },
+                quarterly: { int: '35', dec: '.99', total: 35.99, cycles: 3,  cycleLabel: 'trimestre', discount: 10 },
+                annual:    { int: '31', dec: '.19', total: 31.19, cycles: 12, cycleLabel: 'año',        discount: 22 }
+            }
+        };
+
+        const DOP_RATE = 60;
+        const periodLabels = {
+            monthly:   'USD / mes',
+            quarterly: 'USD / mes — facturado trimestral',
+            annual:    'USD / mes — facturado anual'
+        };
+
+        function formatDOP(usd) {
+            const dop = Math.round(usd * DOP_RATE);
+            return '~RD$ ' + dop.toLocaleString('es-DO') + ' /mes';
+        }
+
+        function formatTotal(data) {
+            const billingTotal = (data.total * data.cycles).toFixed(2);
+            const dopTotal = Math.round(data.total * data.cycles * DOP_RATE).toLocaleString('es-DO');
+            if (data.cycles === 1) {
+                return { label: 'Total al mes:', amount: '$' + billingTotal + ' USD', dop: '~RD$ ' + dopTotal };
+            } else if (data.cycles === 3) {
+                return { label: 'Total al trimestre:', amount: '$' + billingTotal + ' USD', dop: '~RD$ ' + dopTotal };
+            } else {
+                return { label: 'Total al año:', amount: '$' + billingTotal + ' USD', dop: '~RD$ ' + dopTotal };
+            }
+        }
+
+        function positionIndicator() {
+            const activeTab = document.querySelector('.pricing-tab.active');
+            const indicator = document.getElementById('tab-indicator');
+            if (!activeTab || !indicator) return;
+            const tabsRect = activeTab.parentElement.getBoundingClientRect();
+            const activeRect = activeTab.getBoundingClientRect();
+            indicator.style.width = activeRect.width + 'px';
+            indicator.style.left = (activeRect.left - tabsRect.left) + 'px';
+        }
+
+        function updatePrices(period) {
+            const cards = [
+                document.getElementById('card-standard'),
+                document.getElementById('card-enterprise')
+            ];
+
+            // Animate cards out
+            cards.forEach(card => { if (card) card.classList.add('card-updating'); });
+
+            setTimeout(() => {
+                // Standard Plan
+                const stdData = pricingData.standard[period];
+                const stdInt = document.getElementById('price-std-int');
+                const stdDec = document.getElementById('price-std-dec');
+                const stdDop = document.getElementById('price-standard-dop');
+                const stdPeriod = document.getElementById('period-standard');
+                const stdSave = document.getElementById('save-standard');
+                const stdPrice = document.getElementById('price-standard');
+
+                if (stdInt) stdInt.textContent = stdData.int;
+                if (stdDec) stdDec.textContent = stdData.dec;
+                if (stdDop) {
+                    stdDop.textContent = formatDOP(stdData.total);
+                    stdDop.classList.add('price-changing');
+                    setTimeout(() => stdDop.classList.remove('price-changing'), 500);
+                }
+                if (stdPeriod) stdPeriod.textContent = periodLabels[period];
+
+                // Total a pagar real
+                const stdTotalEl = document.getElementById('total-standard');
+                if (stdTotalEl) {
+                    const t = formatTotal(stdData);
+                    stdTotalEl.innerHTML = t.label + ' <strong>' + t.amount + '</strong> <span class="total-dop">(' + t.dop + ')</span>';
+                    stdTotalEl.classList.add('price-changing');
+                    setTimeout(() => stdTotalEl.classList.remove('price-changing'), 500);
+                }
+                if (stdPrice) {
+                    stdPrice.classList.add('price-changing');
+                    setTimeout(() => stdPrice.classList.remove('price-changing'), 500);
+                }
+
+                if (stdSave) {
+                    if (stdData.discount) {
+                        stdSave.textContent = '🎉 Ahorras ' + stdData.discount + '%';
+                        stdSave.classList.remove('hidden');
+                        stdSave.classList.add('visible');
+                    } else {
+                        stdSave.classList.remove('visible');
+                        stdSave.classList.add('hidden');
+                    }
+                }
+
+                // Enterprise Plan
+                const entData = pricingData.enterprise[period];
+                const entInt = document.getElementById('price-ent-int');
+                const entDec = document.getElementById('price-ent-dec');
+                const entDop = document.getElementById('price-enterprise-dop');
+                const entPeriod = document.getElementById('period-enterprise');
+                const entSave = document.getElementById('save-enterprise');
+                const entPrice = document.getElementById('price-enterprise');
+
+                if (entInt) entInt.textContent = entData.int;
+                if (entDec) entDec.textContent = entData.dec;
+                if (entDop) {
+                    entDop.textContent = formatDOP(entData.total);
+                    entDop.classList.add('price-changing');
+                    setTimeout(() => entDop.classList.remove('price-changing'), 500);
+                }
+                if (entPeriod) entPeriod.textContent = periodLabels[period];
+
+                // Total a pagar real
+                const entTotalEl = document.getElementById('total-enterprise');
+                if (entTotalEl) {
+                    const t = formatTotal(entData);
+                    entTotalEl.innerHTML = t.label + ' <strong>' + t.amount + '</strong> <span class="total-dop">(' + t.dop + ')</span>';
+                    entTotalEl.classList.add('price-changing');
+                    setTimeout(() => entTotalEl.classList.remove('price-changing'), 500);
+                }
+                if (entPrice) {
+                    entPrice.classList.add('price-changing');
+                    setTimeout(() => entPrice.classList.remove('price-changing'), 500);
+                }
+
+                if (entSave) {
+                    if (entData.discount) {
+                        entSave.textContent = '🎉 Ahorras ' + entData.discount + '%';
+                        entSave.classList.remove('hidden');
+                        entSave.classList.add('visible');
+                    } else {
+                        entSave.classList.remove('visible');
+                        entSave.classList.add('hidden');
+                    }
+                }
+
+                // Animate cards back in
+                cards.forEach(card => {
+                    if (card) {
+                        card.classList.remove('card-updating');
+                        card.classList.add('card-updated');
+                        setTimeout(() => card.classList.remove('card-updated'), 500);
+                    }
+                });
+            }, 200);
+        }
+
+        // Tab click handlers
+        const tabs = document.querySelectorAll('.pricing-tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const period = tab.dataset.period;
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                positionIndicator();
+                updatePrices(period);
+            });
+        });
+
+        // Position indicator on load
+        window.addEventListener('load', () => {
+            positionIndicator();
+        });
+
+        // Reposition on resize
+        window.addEventListener('resize', () => {
+            positionIndicator();
+        });
+    </script>
+</body>
+
+</html>
