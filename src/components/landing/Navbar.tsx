@@ -40,6 +40,8 @@ export default function Navbar() {
         <li><a href="#como-funciona" onClick={() => setIsMenuOpen(false)}>Cómo funciona</a></li>
         <li><a href="#alcance" onClick={() => setIsMenuOpen(false)}>Alcance</a></li>
         <li><a href="#precios" onClick={() => setIsMenuOpen(false)}>Precios</a></li>
+        <li className="mobile-only"><a href="#" className="btn-login" onClick={() => setIsMenuOpen(false)}>Iniciar sesión</a></li>
+        <li className="mobile-only"><a href="#precios" className="nav-cta" onClick={() => setIsMenuOpen(false)}>Empieza gratis</a></li>
       </ul>
 
       <div className="nav-right">
