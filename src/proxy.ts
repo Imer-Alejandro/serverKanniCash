@@ -2,10 +2,11 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 /**
- * Global middleware to protect API routes.
+ * Global proxy to protect API routes.
  * Webhooks are excluded from authentication checks.
+ * This replaces the deprecated middleware convention.
  */
-export function middleware(request: NextRequest) {
+export default async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Protect all /api routes except webhooks

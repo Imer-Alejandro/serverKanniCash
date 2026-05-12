@@ -36,17 +36,17 @@ export default function Navbar() {
       </div>
 
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-        <li><a href="#problema" onClick={() => setIsMenuOpen(false)}>Soluciones</a></li>
-        <li><a href="#como-funciona" onClick={() => setIsMenuOpen(false)}>Cómo funciona</a></li>
-        <li><a href="#alcance" onClick={() => setIsMenuOpen(false)}>Alcance</a></li>
-        <li><a href="#precios" onClick={() => setIsMenuOpen(false)}>Precios</a></li>
-        <li className="mobile-only"><a href="#" className="btn-login" onClick={() => setIsMenuOpen(false)}>Iniciar sesión</a></li>
-        <li className="mobile-only"><a href="#precios" className="nav-cta" onClick={() => setIsMenuOpen(false)}>Empieza gratis</a></li>
+        <li><a href="/about" onClick={() => setIsMenuOpen(false)}>Nosotros</a></li>
+        <li><a href="/#problema" onClick={() => setIsMenuOpen(false)}>Soluciones</a></li>
+        <li><a href="/#como-funciona" onClick={() => setIsMenuOpen(false)}>Cómo funciona</a></li>
+        <li><a href="/pricing" onClick={() => setIsMenuOpen(false)}>Precios</a></li>
+        <li className="mobile-only"><a href="/login" className="btn-login" onClick={() => setIsMenuOpen(false)}>Iniciar sesión</a></li>
+        <li className="mobile-only"><a href="/pricing" className="nav-cta" onClick={() => setIsMenuOpen(false)}>Empieza gratis</a></li>
       </ul>
 
       <div className="nav-right">
-        <a href="#" className="btn-login">Iniciar sesión</a>
-        <a href="#precios" className="nav-cta">Empieza gratis</a>
+        <a href="/login" className="btn-login">Iniciar sesión</a>
+        <a href="/pricing" className="nav-cta">Empieza gratis</a>
       </div>
     </nav>
   );

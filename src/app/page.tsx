@@ -353,10 +353,9 @@ export default function LandingPage() {
             <ScrollReveal>
               <div className="footer-col-title">Compañía</div>
               <ul className="footer-links">
-                <li><a href="#">Sobre nosotros</a></li>
-                <li><a href="#">Carreras</a></li>
-                <li><a href="#blog">Blog</a></li>
-                <li><a href="#precios">Precios</a></li>
+                <li><a href="/about">Sobre nosotros</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/pricing">Precios</a></li>
               </ul>
             </ScrollReveal>
 
@@ -373,10 +372,9 @@ export default function LandingPage() {
             <ScrollReveal>
               <div className="footer-col-title">Recursos</div>
               <ul className="footer-links">
-                <li><a href="#">Plantillas</a></li>
-                <li><a href="#">Tutoriales</a></li>
-                <li><a href="#">Guías</a></li>
-                <li><a href="#">Documentación</a></li>
+                <li><a href="/guide">Tutoriales</a></li>
+                <li><a href="/guide">Guías</a></li>
+                <li><a href="/support">Soporte Técnico</a></li>
               </ul>
             </ScrollReveal>
 
@@ -390,6 +388,11 @@ export default function LandingPage() {
           </div>
           <ScrollReveal className="footer-bottom">
             <p>© 2025 Kannicash. Todos los derechos reservados.</p>
+            <div style={{ display: 'flex', gap: '20px', marginTop: '10px', justifyContent: 'center' }}>
+                <a href="/terms" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.8rem' }}>Términos</a>
+                <a href="/privacy" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.8rem' }}>Privacidad</a>
+                <a href="/refunds" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.8rem' }}>Devoluciones</a>
+            </div>
           </ScrollReveal>
         </div>
       </footer>
