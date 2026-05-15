@@ -1,9 +1,43 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ScrollReveal from "./ScrollReveal";
 
 export default function SolucionesSection() {
+  const rightColumnRef = useRef<HTMLDivElement>(null);
+  const stickyBoxRef = useRef<HTMLDivElement>(null);
+  const [offsetY, setOffsetY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!rightColumnRef.current || !stickyBoxRef.current) return;
+      
+      const parentRect = rightColumnRef.current.getBoundingClientRect();
+      const stickyBoxHeight = stickyBoxRef.current.offsetHeight;
+      const topOffset = 120; // Distance from top to stick
+
+      // If the top of the parent reaches the topOffset
+      if (parentRect.top <= topOffset) {
+        // Calculate how much we have scrolled PAST the stick point
+        const maxScroll = parentRect.height - stickyBoxHeight;
+        let newOffset = Math.abs(parentRect.top - topOffset);
+        
+        // Cap the offset so it doesn't scroll out of the section
+        if (newOffset > maxScroll) {
+          newOffset = maxScroll;
+        }
+        
+        setOffsetY(newOffset);
+      } else {
+        setOffsetY(0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Init
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <section className="soluciones-section" id="soluciones">
       <div className="container">
@@ -54,8 +88,12 @@ export default function SolucionesSection() {
           </div>
 
           {/* RIGHT COLUMN: STICKY INTERACTIVE CHART BOX */}
-          <div className="soluciones-right">
-            <div className="sticky-box-wrapper">
+          <div className="soluciones-right" ref={rightColumnRef}>
+            <div 
+              className="sticky-box-wrapper" 
+              ref={stickyBoxRef}
+              style={{ transform: `translateY(${offsetY}px)`, transition: offsetY === 0 ? 'transform 0.2s ease' : 'none' }}
+            >
               <ScrollReveal delay={400}>
                 <div className="chart-box-outer">
                   <div className="s-float f-chip-1">✓ Pago registrado</div>
@@ -203,13 +241,13 @@ export default function SolucionesSection() {
         .soluciones-right {
           position: relative;
           width: 100%;
-          height: 100%; /* Important for inner sticky to work */
+          height: 100%; /* Important: makes the column full height of the grid row */
         }
 
         .sticky-box-wrapper {
-          position: sticky;
-          top: 120px;
-          z-index: 10;
+          position: relative;
+          width: 100%;
+          will-change: transform;
         }
 
         .chart-box-outer {
