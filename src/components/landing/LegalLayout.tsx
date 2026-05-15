@@ -67,17 +67,17 @@ const LegalLayout: React.FC<LegalLayoutProps> = ({ title, subtitle, children }) 
                 <div>
                     <div className="footer-col-title" style={{ fontWeight: 800, marginBottom: '24px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--gray-900)' }}>Legal</div>
                     <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <li><a href="/about" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Nosotros</a></li>
-                        <li><a href="/terms" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Términos de Servicio</a></li>
-                        <li><a href="/privacy" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Privacidad</a></li>
-                        <li><a href="/refunds" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Devoluciones</a></li>
+                <li><a href="/nosotros" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Nosotros</a></li>
+                        <li><a href="/terminos" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Términos de Servicio</a></li>
+                        <li><a href="/privacidad" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Privacidad</a></li>
+                        <li><a href="/reembolsos" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Devoluciones</a></li>
                     </ul>
                 </div>
                 <div>
                     <div className="footer-col-title" style={{ fontWeight: 800, marginBottom: '24px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--gray-900)' }}>Soporte</div>
                     <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                        <li><a href="/guide" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Guía de uso</a></li>
-                        <li><a href="/support" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Contacto Técnico</a></li>
+                        <li><a href="/guia" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Guía de uso</a></li>
+                        <li><a href="/soporte" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Contacto Técnico</a></li>
                         <li><a href="/blog" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Blog</a></li>
                     </ul>
                 </div>

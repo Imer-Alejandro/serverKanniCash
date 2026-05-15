@@ -14,20 +14,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const close = () => setIsMenuOpen(false);
+
   return (
     <nav id="navbar" className={isScrolled ? "scrolled" : ""}>
-      <a href="#" className="nav-logo">
-        <div className="nav-logo-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-            <line x1="12" y1="1" x2="12" y2="23"></line>
-            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-          </svg>
-        </div>
-        Kannicash
+
+      {/* ── LOGO: Kanni + cash italic blue ── */}
+      <a href="/" className="nav-logo" style={{ gap: "0", letterSpacing: "-0.04em" }}>
+        <span style={{ fontWeight: 800, color: "var(--gray-900)" }}>Kanni</span>
+        <em style={{
+          fontFamily: "var(--font-instrument)",
+          fontStyle: "italic",
+          fontWeight: 400,
+          color: "var(--primary)",
+        }}>cash</em>
       </a>
 
-      <div 
-        className={`nav-toggle ${isMenuOpen ? "active" : ""}`} 
+      {/* ── MOBILE TOGGLE ── */}
+      <div
+        className={`nav-toggle ${isMenuOpen ? "active" : ""}`}
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <span></span>
@@ -35,19 +40,28 @@ export default function Navbar() {
         <span></span>
       </div>
 
+      {/* ── NAV LINKS ── */}
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-        <li><a href="/about" onClick={() => setIsMenuOpen(false)}>Nosotros</a></li>
-        <li><a href="/#problema" onClick={() => setIsMenuOpen(false)}>Soluciones</a></li>
-        <li><a href="/#como-funciona" onClick={() => setIsMenuOpen(false)}>Cómo funciona</a></li>
-        <li><a href="/pricing" onClick={() => setIsMenuOpen(false)}>Precios</a></li>
-        <li className="mobile-only"><a href="/login" className="btn-login" onClick={() => setIsMenuOpen(false)}>Iniciar sesión</a></li>
-        <li className="mobile-only"><a href="/pricing" className="nav-cta" onClick={() => setIsMenuOpen(false)}>Empieza gratis</a></li>
+        <li><a href="/"          onClick={close}>Inicio</a></li>
+        <li><a href="/demostracion" onClick={close}>Demostración</a></li>
+        <li><a href="/#problema" onClick={close}>Soluciones</a></li>
+        <li><a href="/precios"   onClick={close}>Precios</a></li>
+        <li><a href="/blog"      onClick={close}>Blog</a></li>
+        {/* Mobile-only CTA buttons */}
+        <li className="mobile-only">
+          <a href="/login" className="nav-btn-login" onClick={close}>Iniciar sesión</a>
+        </li>
+        <li className="mobile-only">
+          <a href="/precios" className="nav-btn-cta" onClick={close}>Empezar gratis</a>
+        </li>
       </ul>
 
+      {/* ── DESKTOP RIGHT BUTTONS ── */}
       <div className="nav-right">
-        <a href="/login" className="btn-login">Iniciar sesión</a>
-        <a href="/pricing" className="nav-cta">Empieza gratis</a>
+        <a href="/login"   className="nav-btn-login">Iniciar sesión</a>
+        <a href="/precios" className="nav-btn-cta">Empezar gratis →</a>
       </div>
+
     </nav>
   );
 }
