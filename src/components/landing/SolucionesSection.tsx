@@ -6,35 +6,42 @@ import ScrollReveal from "./ScrollReveal";
 export default function SolucionesSection() {
   const rightColumnRef = useRef<HTMLDivElement>(null);
   const stickyBoxRef = useRef<HTMLDivElement>(null);
-  const [offsetY, setOffsetY] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const updatePosition = () => {
       if (!rightColumnRef.current || !stickyBoxRef.current) return;
       
       const parentRect = rightColumnRef.current.getBoundingClientRect();
       const stickyBoxHeight = stickyBoxRef.current.offsetHeight;
-      const topOffset = 120; // Distance from top to stick
+      const topOffset = 120;
 
-      // If the top of the parent reaches the topOffset
       if (parentRect.top <= topOffset) {
-        // Calculate how much we have scrolled PAST the stick point
         const maxScroll = parentRect.height - stickyBoxHeight;
         let newOffset = Math.abs(parentRect.top - topOffset);
         
-        // Cap the offset so it doesn't scroll out of the section
-        if (newOffset > maxScroll) {
-          newOffset = maxScroll;
-        }
+        if (newOffset > maxScroll) newOffset = maxScroll;
         
-        setOffsetY(newOffset);
+        stickyBoxRef.current.style.transform = `translateY(${newOffset}px)`;
+        stickyBoxRef.current.style.transition = 'none';
       } else {
-        setOffsetY(0);
+        stickyBoxRef.current.style.transform = `translateY(0px)`;
+        stickyBoxRef.current.style.transition = 'transform 0.2s ease';
+      }
+      
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updatePosition);
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Init
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    updatePosition(); // Init
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -92,7 +99,6 @@ export default function SolucionesSection() {
             <div 
               className="sticky-box-wrapper" 
               ref={stickyBoxRef}
-              style={{ transform: `translateY(${offsetY}px)`, transition: offsetY === 0 ? 'transform 0.2s ease' : 'none' }}
             >
               <ScrollReveal delay={400}>
                 <div className="chart-box-outer">
