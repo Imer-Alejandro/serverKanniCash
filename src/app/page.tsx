@@ -55,9 +55,14 @@ export default function LandingPage() {
       {/* ALCANCE / BENTO SECTION */}
       <AlcanceBento />
 
+      {/* TESTIMONIALS SECTION */}
+      <TestimonialsSection />
 
       {/* PRECIOS */}
       <PricingSection />
+
+      {/* FAQ SECTION */}
+      <FAQSection />
 
       {/* BLOG BENTO SECTION */}
       <section id="blog">
@@ -146,12 +151,6 @@ export default function LandingPage() {
         </ScrollReveal>
       </section>
 
-      {/* TESTIMONIALS SECTION */}
-      <TestimonialsSection />
-
-      {/* FAQ SECTION */}
-      <FAQSection />
-
       {/* BANNER PRE-FOOTER */}
       <section className="banner-section">
         <ScrollReveal className="banner-card">
@@ -196,8 +195,6 @@ export default function LandingPage() {
           </div>
         </ScrollReveal>
       </section>
-
-
 
       <Footer />
     </div>
