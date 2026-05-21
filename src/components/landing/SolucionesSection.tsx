@@ -6,13 +6,46 @@ import ScrollReveal from "./ScrollReveal";
 export default function SolucionesSection() {
   const rightColumnRef = useRef<HTMLDivElement>(null);
   const stickyBoxRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const [rotate, setRotate] = useState({ x: 0, y: 0 });
+  const [offset, setOffset] = useState({ x: 0, y: 0 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+
+    // Normalize coordinates from -0.5 to 0.5
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+
+    setRotate({
+      x: -y * 12, // Maximum rotation in degrees
+      y: x * 12
+    });
+    setOffset({
+      x: x * 16,  // Parallax translation in pixels
+      y: y * 16
+    });
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setRotate({ x: 0, y: 0 });
+    setOffset({ x: 0, y: 0 });
+  };
 
   useEffect(() => {
     let ticking = false;
 
     const updatePosition = () => {
       if (!rightColumnRef.current || !stickyBoxRef.current) return;
-      
+
       const parentRect = rightColumnRef.current.getBoundingClientRect();
       const stickyBoxHeight = stickyBoxRef.current.offsetHeight;
       const topOffset = 120;
@@ -20,16 +53,16 @@ export default function SolucionesSection() {
       if (parentRect.top <= topOffset) {
         const maxScroll = parentRect.height - stickyBoxHeight;
         let newOffset = Math.abs(parentRect.top - topOffset);
-        
+
         if (newOffset > maxScroll) newOffset = maxScroll;
-        
+
         stickyBoxRef.current.style.transform = `translateY(${newOffset}px)`;
         stickyBoxRef.current.style.transition = 'none';
       } else {
         stickyBoxRef.current.style.transform = `translateY(0px)`;
         stickyBoxRef.current.style.transition = 'transform 0.2s ease';
       }
-      
+
       ticking = false;
     };
 
@@ -96,18 +129,81 @@ export default function SolucionesSection() {
 
           {/* RIGHT COLUMN: STICKY INTERACTIVE CHART BOX */}
           <div className="soluciones-right" ref={rightColumnRef}>
-            <div 
-              className="sticky-box-wrapper" 
+            <div
+              className="sticky-box-wrapper"
               ref={stickyBoxRef}
             >
               <ScrollReveal delay={400}>
-                <div className="chart-box-outer">
-                  <div className="s-float f-chip-1">✓ Pago registrado</div>
-                  <div className="s-float f-chip-2">RD$ 2,500</div>
-                  <div className="s-float f-chip-3">WhatsApp enviado</div>
-                  <div className="s-float f-chip-4">Capital: +RD$ 50k</div>
+                <div
+                  className="chart-box-outer"
+                  ref={cardRef}
+                  onMouseMove={handleMouseMove}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                  style={{
+                    perspective: "1000px",
+                    transformStyle: "preserve-3d"
+                  }}
+                >
+                  {/* Floating chips wrapped in parallax positioning */}
+                  <div
+                    className="s-float-wrap f-chip-1"
+                    style={{
+                      transform: isHovered
+                        ? `translate3d(${-offset.x * 0.7}px, ${-offset.y * 0.7}px, 90px)`
+                        : "translate3d(0, 0, 40px)",
+                      transition: isHovered ? "transform 0.08s ease-out" : "transform 0.5s ease"
+                    }}
+                  >
+                    <div className="s-float">✓ Pago registrado</div>
+                  </div>
 
-                  <div className="chart-box-main">
+                  <div
+                    className="s-float-wrap f-chip-2"
+                    style={{
+                      transform: isHovered
+                        ? `translate3d(${-offset.x * 1.1}px, ${-offset.y * 1.1}px, 110px)`
+                        : "translate3d(0, 0, 50px)",
+                      transition: isHovered ? "transform 0.08s ease-out" : "transform 0.5s ease"
+                    }}
+                  >
+                    <div className="s-float">RD$ 2,500</div>
+                  </div>
+
+                  <div
+                    className="s-float-wrap f-chip-3"
+                    style={{
+                      transform: isHovered
+                        ? `translate3d(${-offset.x * 1.4}px, ${-offset.y * 1.4}px, 120px)`
+                        : "translate3d(0, 0, 60px)",
+                      transition: isHovered ? "transform 0.08s ease-out" : "transform 0.5s ease"
+                    }}
+                  >
+                    <div className="s-float">WhatsApp enviado</div>
+                  </div>
+
+                  <div
+                    className="s-float-wrap f-chip-4"
+                    style={{
+                      transform: isHovered
+                        ? `translate3d(${-offset.x * 0.4}px, ${-offset.y * 0.4}px, 80px)`
+                        : "translate3d(0, 0, 30px)",
+                      transition: isHovered ? "transform 0.08s ease-out" : "transform 0.5s ease"
+                    }}
+                  >
+                    <div className="s-float">Capital: +RD$ 50k</div>
+                  </div>
+
+                  <div
+                    className="chart-box-main"
+                    style={{
+                      transform: isHovered
+                        ? `rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1.02, 1.02, 1.02)`
+                        : "rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)",
+                      transition: isHovered ? "transform 0.08s ease-out" : "transform 0.5s ease",
+                      transformStyle: "preserve-3d"
+                    }}
+                  >
                     <div className="chart-box-header">
                       <div>
                         <span className="c-label">Ingresos</span>
@@ -307,8 +403,15 @@ export default function SolucionesSection() {
         .c-s-progress { height: 100%; border-radius: 20px; }
 
         /* Floating elements */
-        .s-float {
+        .s-float-wrap {
           position: absolute;
+          z-index: 20;
+          pointer-events: none;
+          transform-style: preserve-3d;
+        }
+
+        .s-float {
+          display: inline-block;
           background: rgba(255, 255, 255, 0.95);
           backdrop-filter: blur(12px);
           padding: 8px 18px;
@@ -317,20 +420,26 @@ export default function SolucionesSection() {
           font-weight: 700;
           box-shadow: 0 10px 30px rgba(0,0,0,0.08);
           border: 1px solid rgba(255, 255, 255, 0.6);
-          z-index: 20;
           animation: s-float 6s ease-in-out infinite;
           color: var(--gray-800);
           white-space: nowrap;
         }
 
-        .f-chip-1 { top: -15px; right: -25px; animation-delay: 0s; }
-        .f-chip-2 { bottom: 50px; left: -50px; animation-delay: -2s; background: var(--primary); color: white; border: none; }
-        .f-chip-3 { top: 60px; left: -100px; animation-delay: -4s; }
-        .f-chip-4 { bottom: -10px; right: -10px; animation-delay: -1.5s; background: #8b5cf6; color: white; border: none; }
+        .f-chip-1 { top: -15px; right: -25px; }
+        .f-chip-1 .s-float { animation-delay: 0s; }
+        
+        .f-chip-2 { bottom: 50px; left: -50px; }
+        .f-chip-2 .s-float { animation-delay: -2s; background: var(--primary); color: white; border: none; }
+        
+        .f-chip-3 { top: 60px; left: -100px; }
+        .f-chip-3 .s-float { animation-delay: -4s; }
+        
+        .f-chip-4 { bottom: -22px; right: -25px; }
+        .f-chip-4 .s-float { animation-delay: -1.5s; background: #8b5cf6; color: white; border: none; }
 
         @keyframes s-float {
           0%, 100% { transform: translateY(0) rotate(0deg); }
-          50% { transform: translateY(-15px) rotate(2deg); }
+          50% { transform: translateY(-12px) rotate(1.5deg); }
         }
 
         @media (max-width: 1024px) {

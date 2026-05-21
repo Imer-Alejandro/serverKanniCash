@@ -31,9 +31,9 @@ export default function AlcanceBento() {
                 <h3>Prestamistas</h3>
               </div>
             </div>
-            
+
             <p>Controla tus préstamos personales, cobros diarios o semanales, cálculo automático de intereses y mora en tiempo real.</p>
-            
+
             <ul className="check-list">
               <li>
                 <span className="check-badge">
@@ -70,9 +70,9 @@ export default function AlcanceBento() {
                 <h3>Ventas a Crédito</h3>
               </div>
             </div>
-            
+
             <p>Ideal para tiendas de ropa, electrodomésticos y servicios que venden a plazos y necesitan un cobro recurrente.</p>
-            
+
             <ul className="check-list">
               <li>
                 <span className="check-badge">
@@ -109,9 +109,9 @@ export default function AlcanceBento() {
                 <h3>Financieras</h3>
               </div>
             </div>
-            
+
             <p>Para oficinas y equipos que administran carteras de microcréditos de mediana escala de manera organizada.</p>
-            
+
             <ul className="check-list">
               <li>
                 <span className="check-badge">
