@@ -42,9 +42,9 @@ export default function Navbar() {
 
       {/* ── NAV LINKS ── */}
       <ul className={`nav-links ${isMenuOpen ? "active" : ""}`}>
-        <li><a href="/"          onClick={close}>Inicio</a></li>
+        <li><a href="/" onClick={close}>Inicio</a></li>
         <li><a href="/demostracion" onClick={close}>Demostración</a></li>
-        <li><a href="/#problema" onClick={close}>Soluciones</a></li>
+        <li><a href="/soporte" onClick={close}>contactos</a></li>
         <li><a href="/precios"   onClick={close}>Precios</a></li>
         <li><a href="/blog"      onClick={close}>Blog</a></li>
         {/* Mobile-only CTA buttons */}
