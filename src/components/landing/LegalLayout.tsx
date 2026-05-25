@@ -3,6 +3,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import ScrollReveal from "./ScrollReveal";
+import Footer from "@/components/landing/Footer";
 
 interface LegalLayoutProps {
   title: string;
@@ -49,48 +50,8 @@ const LegalLayout: React.FC<LegalLayoutProps> = ({ title, subtitle, children }) 
         </ScrollReveal>
       </main>
 
-      <footer style={{ background: 'var(--white)', borderTop: '1px solid var(--gray-100)', padding: '100px 24px 60px' }}>
-         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '60px', marginBottom: '80px' }}>
-                <div>
-                    <div className="footer-brand-name" style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '24px', fontWeight: 850, fontSize: '1.3rem' }}>
-                        <div className="nav-logo-icon" style={{ width: '32px', height: '32px' }}>
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                            <line x1="12" y1="1" x2="12" y2="23"></line>
-                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                        </svg>
-                        </div>
-                        Kannicash
-                    </div>
-                    <p style={{ color: 'var(--gray-500)', fontSize: '0.95rem' }}>Gestión financiera avanzada para prestamistas independientes en RD.</p>
-                </div>
-                <div>
-                    <div className="footer-col-title" style={{ fontWeight: 800, marginBottom: '24px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--gray-900)' }}>Legal</div>
-                    <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                <li><a href="/nosotros" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Nosotros</a></li>
-                        <li><a href="/terminos" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Términos de Servicio</a></li>
-                        <li><a href="/privacidad" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Privacidad</a></li>
-                        <li><a href="/reembolsos" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Devoluciones</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <div className="footer-col-title" style={{ fontWeight: 800, marginBottom: '24px', fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: 'var(--gray-900)' }}>Soporte</div>
-                    <ul style={{ listStyle: 'none', padding: 0, display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                        <li><a href="/guia" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Guía de uso</a></li>
-                        <li><a href="/soporte" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Contacto Técnico</a></li>
-                        <li><a href="/blog" style={{ color: 'var(--gray-500)', textDecoration: 'none', fontSize: '0.95rem', transition: '0.3s' }}>Blog</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div style={{ borderTop: '1px solid var(--gray-100)', paddingTop: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '20px' }}>
-                <p style={{ color: 'var(--gray-400)', fontSize: '0.9rem' }}>© 2025 Kannicash. Todos los derechos reservados.</p>
-                <div style={{ display: 'flex', gap: '20px' }}>
-                    <a href="/" style={{ color: 'var(--gray-400)', textDecoration: 'none', fontSize: '0.9rem' }}>Volver al inicio</a>
-                </div>
-            </div>
-         </div>
-      </footer>
-
+          <Footer />
+      
       <style jsx>{`
         .prose-content h2 {
           font-size: 1.8rem;
