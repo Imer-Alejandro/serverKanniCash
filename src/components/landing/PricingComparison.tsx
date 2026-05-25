@@ -185,6 +185,10 @@ export default function PricingComparison() {
         </table>
       </div>
 
+        <div style={{ textAlign: "center", marginTop: 24 }}>
+          <a href="#precios" className="compare-cta">Cotizar un plan</a>
+        </div>
+
       <style jsx>{`
         @media (max-width: 768px) {
           table {
@@ -193,6 +197,24 @@ export default function PricingComparison() {
           th, td {
             padding: 12px !important;
           }
+        }
+
+        .compare-cta {
+          display: inline-block;
+          background: transparent;
+          color: var(--primary);
+          padding: 10px 26px;
+          border-radius: 999px;
+          text-decoration: none;
+          font-weight: 800;
+          border: 2px solid var(--primary);
+          transition: background 220ms ease, color 220ms ease, transform 180ms ease, box-shadow 180ms ease;
+        }
+        .compare-cta:hover {
+          background: linear-gradient(135deg, var(--primary), var(--primary-light));
+          color: white;
+          transform: translateY(-3px);
+          box-shadow: 0 14px 40px rgba(20,104,138,0.12);
         }
       `}</style>
     </div>
