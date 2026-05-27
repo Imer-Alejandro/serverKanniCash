@@ -46,20 +46,20 @@ export default function Navbar() {
         <li><a href="/demostracion" onClick={close}>Demostración</a></li>
         <li><a href="/soporte" onClick={close}>contactos</a></li>
         <li><a href="/precios"   onClick={close}>Precios</a></li>
-        <li><a href="/blog"      onClick={close}>Blog</a></li>
+        <li><a href="https://blog.kannicash.com" target="_blank" rel="noopener noreferrer" onClick={close}>Blog</a></li>
         {/* Mobile-only CTA buttons */}
         <li className="mobile-only">
-          <a href="/login" className="nav-btn-login" onClick={close}>Iniciar sesión</a>
+          <a href="https://portal.kannicash.com" target="_blank" rel="noopener noreferrer" className="nav-btn-login" onClick={close}>Iniciar sesión</a>
         </li>
         <li className="mobile-only">
-          <a href="/precios" className="nav-btn-cta" onClick={close}>Empezar gratis</a>
+          <a href="https://portal.kannicash.com" target="_blank" rel="noopener noreferrer" className="nav-btn-cta" onClick={close}>Empezar gratis</a>
         </li>
       </ul>
 
       {/* ── DESKTOP RIGHT BUTTONS ── */}
       <div className="nav-right">
-        <a href="/login"   className="nav-btn-login">Iniciar sesión</a>
-        <a href="/precios" className="nav-btn-cta">Empezar gratis →</a>
+        <a href="https://portal.kannicash.com" target="_blank" rel="noopener noreferrer" className="nav-btn-login">Iniciar sesión</a>
+        <a href="https://portal.kannicash.com" target="_blank" rel="noopener noreferrer" className="nav-btn-cta">Empezar gratis →</a>
       </div>
 
     </nav>
