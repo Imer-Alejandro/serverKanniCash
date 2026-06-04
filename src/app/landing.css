@@ -190,6 +190,9 @@ nav.scrolled {
 @media (max-width: 1024px) {
     nav {
         padding: 15px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     nav.scrolled {
@@ -203,12 +206,14 @@ nav.scrolled {
         height: 100vh;
         width: 80%;
         max-width: 400px;
-        background: rgba(255, 255, 255, 0.75) !important;
+        background: rgba(255, 255, 255, 0.95) !important;
         -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
         backdrop-filter: blur(20px) saturate(180%) !important;
         transform: translateZ(0);
         /* Cleaned up prefix */
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
         padding: 100px 40px;
         transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         box-shadow: -20px 0 60px rgba(0, 0, 0, 0.1);

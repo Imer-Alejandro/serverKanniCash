@@ -170,7 +170,7 @@ export default function HeroShowcase() {
 
                   <div className="ui-card ui-card--notification">
                     <div className="noti-header">
-                      <div className="noti-icon">🔔</div>
+                      <div className="noti-icon"></div>
                       <div className="noti-meta">
                         <span className="noti-title">Recordatorio Enviado</span>
                         <span className="noti-time">Hace 2 min</span>
@@ -748,6 +748,8 @@ export default function HeroShowcase() {
           border: none;
           box-shadow: none;
           overflow: hidden;
+          display: flex;
+          flex-direction: column;
         }
 
         .surface-grid {
@@ -823,7 +825,8 @@ export default function HeroShowcase() {
           position: absolute;
           inset: 0;
           z-index: 2;
-          display: block;
+          display: flex;
+          flex-direction: column;
           pointer-events: none;
           
           /* Combining horizontal & vertical masks to blend all 4 edges seamlessly */
@@ -838,9 +841,8 @@ export default function HeroShowcase() {
         }
 
         .ui-track {
-          position: absolute;
-          left: 10px;
-          right: 10px;
+          position: relative;
+          flex: 1;
           display: flex;
           gap: 20px;
           padding: 10px;
@@ -848,19 +850,19 @@ export default function HeroShowcase() {
           animation: ui-scroll-x 26s linear infinite;
           will-change: transform;
           align-items: center;
+          min-height: 180px;
         }
 
         .ui-track--top {
-          top: 35px;
+          order: 1;
         }
 
         .ui-track--middle {
-          top: 50%;
-          transform: translateY(-50%);
+          order: 2;
         }
 
         .ui-track--bottom {
-          bottom: 35px;
+          order: 3;
         }
 
         .ui-track--reverse {
