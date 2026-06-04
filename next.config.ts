@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  // @ts-expect-error
   turbopack: {
     root: '.',
   },
