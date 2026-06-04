@@ -2,9 +2,14 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ],
   },
-  // @ts-ignore
+  // @ts-expect-error
   turbopack: {
     root: '.',
   },
