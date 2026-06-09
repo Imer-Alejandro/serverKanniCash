@@ -219,7 +219,7 @@ export default function PremiumPricingHero() {
             <span style={{ background: "#dcfce7", color: "#15803d", fontSize: "11px", fontWeight: 800 }}>MR</span>
             <span style={{ background: "#fef9c3", color: "#a16207", fontSize: "11px", fontWeight: 800 }}>PG</span>
           </div>
-          <span className="pricing-trust-label">+500 prestamistas ya confían en nosotros</span>
+<span className="pricing-trust-label">Impulsando la próxima generación de gestión de préstamos</span>
         </div>
       </div>
 

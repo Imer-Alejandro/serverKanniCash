@@ -97,7 +97,7 @@ export default function Hero() {
             <span style={{ background: "#dcfce7", color: "#15803d", fontSize: "12px", fontWeight: "700" }}>MR</span>
             <span style={{ background: "#fef9c3", color: "#a16207", fontSize: "12px", fontWeight: "700" }}>PG</span>
           </div>
-          <span>+50 prestamistas ya confían en nosotros</span>
+<span>Impulsando la próxima generación de gestión de préstamos</span>
         </div>
       </div>
 
